@@ -30,7 +30,13 @@ const App = () => {
             setSearchTerm(e.target.value.toLowerCase());
           }}
         />
-        <img src={SearchIcon} alt="search" onClick={() => {}} />
+        <img
+          src={SearchIcon}
+          alt="search"
+          onClick={() => {
+            searchMovies(searchTerm);
+          }}
+        />
       </div>
       {movies?.length > 0 ? (
         <div className="container">
